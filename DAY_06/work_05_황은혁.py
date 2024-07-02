@@ -248,12 +248,13 @@ import random
 #  ***
 # *****
 
-num = int(input())
-
 # for i in range(num):
 #     for j in range(1,i*2,2):
 #         print("*".center(num*2))
 #     print()
+
+num = 3 
+# int(input())
 
 for i in range(1, num + 1):
     print(" " * (num - i) + "*" * (2 * i - 1))
