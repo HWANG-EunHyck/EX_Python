@@ -34,13 +34,17 @@ print('end')
 
 data = ['4','6','5','7','1']
 result = []
-for i in data:
-    result.append(int(i))
-print(result,type(result[0]))
 
-# 리스트의 인덱스
-for idx in range(len(data)):
-    # print(f'idx = > {idx}')
-    data[idx] = int(data[idx])
+result= list(map(int,data))
+print(result)
 
-print(data)
+# for i in data:
+#     result.append(int(i))
+# print(result,type(result[0]))
+
+# # 리스트의 인덱스
+# for idx in range(len(data)):
+#     # print(f'idx = > {idx}')
+#     data[idx] = int(data[idx])
+
+# print(data)

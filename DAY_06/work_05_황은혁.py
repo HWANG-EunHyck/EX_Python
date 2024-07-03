@@ -252,9 +252,60 @@ import random
 #     for j in range(1,i*2,2):
 #         print("*".center(num*2))
 #     print()
+ 
+# # int(input())
 
-num = 3 
-# int(input())
+# for i in range(1, num + 1):
+#     print(" " * (num - i) + "*" * (2 * i - 1))
 
-for i in range(1, num + 1):
-    print(" " * (num - i) + "*" * (2 * i - 1))
+
+# 1에서 100까지 출력
+# 3의 배수는 Fizz 출력
+# 5의 배수는 Buzz 출력
+# 3과 5의 공배수는 FizzBuzz 출력
+
+# for i in range(1,101):
+#     if i%15 == 0:
+#         print('FizzBuzz',end=' ')
+#     elif i%3 == 0:
+#             print('Fizz',end= ' ')
+#     elif i%5 == 0:
+#         print('Buzz',end=' ')
+#     else:
+#         print(i, end = ' ')
+
+print()
+
+# for i in range(1, 101):              # 1부터 100까지 100번 반복
+#     if i % 3 == 0 and i % 5 == 0:    # 3과 5의 공배수일 때
+#         print('FizzBuzz',end=' ')            # FizzBuzz 출력
+#     elif i % 3 == 0:                 # 3의 배수일 때
+#         print('Fizz',end=' ')                # Fizz 출력
+#     elif i % 5 == 0:                 # 5의 배수일 때
+#         print('Buzz',end=' ')                # Buzz 출력
+#     else:
+#         print(i,end=' ')  
+
+# for i in range(1,101):
+#      print('Fizz'*(i%3 == 0) + 'Buzz'*(i%5 == 0) or i,end= ' ')
+
+
+# 20.7 연습문제: 2과 11의 배수, 공배수 처리하기
+# 다음 소스 코드를 완성하여 1부터 100까지의 숫자를 출력하면서 
+# 2의 배수일 때는 'Fizz', 11의 배수일 때는 'Buzz', 2과 11의 공배수일 때는 'FizzBuzz'가 출력되게 만드세요.
+
+# for i in range(1,101):
+#      print('Fizz'*(i%2 == 0 ) + "Buzz"*(i%11 == 0) or i,end= ' ')
+
+# 20.8 심사문제: 5와 7의 배수, 공배수 처리하기
+# 표준 입력으로 정수 두 개가 입력됩니다
+# (첫 번째 입력 값의 범위는 1~1000, 두 번째 입력 값의 범위는 10~1000이며 
+#  첫 번째 입력 값은 두 번째 입력 값보다 항상 작습니다). 
+# 첫 번째 정수부터 두 번째 정수까지 숫자를 출력하면서 
+# 5의 배수일 때는 'Fizz', 7의 배수일 때는 'Buzz', 5와 7의 공배수일 때는 'FizzBuzz'를 출력하는 프로그램을 만드세요
+# (input에서 안내 문자열은 출력하지 않아야 합니다).
+
+num = input().split()
+
+for i in range(int(num[0]),int(num[1])+1):
+    print('Fizz'*(i%5==0) + 'Buzz'*(i%7==0) or i)
