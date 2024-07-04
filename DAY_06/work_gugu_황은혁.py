@@ -3,7 +3,7 @@
 for i in range(72):
     n = 2+i//9
     m = 1+i%9
-    print(f'{n} * {n} = {n*m}')
+    print(f'{n} * {m} = {n*m}')
 
 
 # [2] 구구단 가로 출력
