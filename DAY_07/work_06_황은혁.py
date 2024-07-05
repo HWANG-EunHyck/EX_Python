@@ -139,23 +139,23 @@
 
 # print(x)
 
-x = {'a': 10, 'b': 20, 'c': 30, 'd': 40}
-x= {key:value for key,value in x.items() if value !=20}
+# x = {'a': 10, 'b': 20, 'c': 30, 'd': 40}
+# x= {key:value for key,value in x.items() if value !=20}
 
-print(x)
+# print(x)
 
 
 
-x.pop('a','b')
-print(x)
+# x.pop('a','b')
+# print(x)
 
-terrestrial_planet = {
-    'Earth': {
-        'physical_characteristics': {
-            'mean_radius': 6371.0,
-            'mass': 5.97219E+24
-        },
-        'orbital_characteristics': {
-            'orbital_period': 365.25641,
-            'satellites': 1
-        }
+# terrestrial_planet = {
+#     'Earth': {
+#         'physical_characteristics': {
+#             'mean_radius': 6371.0,
+#             'mass': 5.97219E+24
+#         },
+#         'orbital_characteristics': {
+#             'orbital_period': 365.25641,
+#             'satellites': 1
+#         }

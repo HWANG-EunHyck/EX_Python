@@ -9,7 +9,7 @@ d = person.items()
 
 print(d)
 print()
-
+print('d')
 # [메서드 - 값 읽어오는 메서드 get(key)]---------
 # - key에 해당하는 value가 없으면 default자리의 것 출력 일단 error가 안남
 print(person['name'])
@@ -31,4 +31,9 @@ print(person)
 ##**{'weight' : 100,'height' : 170}
 ## weight = 100,height170
 person.update(**{'weight' : 100,'height' : 170})
+print(person)
+
+d = dict(zip(['ddd','eeee'],[1111,2222]))
+person.update(d)
+
 print(person)

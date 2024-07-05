@@ -1,9 +1,21 @@
-my_list = ["가", "나", "다", "라"]
-# 라 다
-# 다 나
-# 나 가
+# [['.', '*', '*'], ['*', '.', '.'], ['.', '*', '.']]
+# 가로 세로
+# col,row = list(map(int,input().split()))
 
-for i in range(len(my_list)-1):
-    print(my_list[-i-1],my_list[-i-2])
+# for i in range(row):
+#     matrix.append(list(input()))
 
+col = 3
+row = 3
 
+matrix = [['.', '*', '*'], ['*', '.', '.'], ['.', '*', '.']]
+
+for i in matrix:
+    for j in i:
+        cnt = 0
+        if j =:
+            j = 
+            print(j,end ='')
+        elif j == '*':
+            print("*",end='')
+    print()
