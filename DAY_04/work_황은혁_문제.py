@@ -1534,3 +1534,49 @@ for i in ohlc[1:]:
 print(gap)
 print(sum(gap))
 
+#200+
+data = input("주민등록번호를 입력하세요 (형식: XXXXXX-XXXXXXX): ")
+
+gender = data.split('-')[1][0]
+print(data.split('-')[1])
+
+
+if gender == '1' or gender == '3':
+    print("남자")
+elif gender == '2' or gender == '4':
+    print("여자")
+else:
+    print("잘못된 주민등록번호입니다.")
+
+
+def check_gender(gender_number):
+    
+    gender = gender_number[7]
+    
+    
+    if gender in ['1', '3']:
+        return "남자"
+    elif gender in ['2', '4']:
+        return "여자"
+    else:
+        return "잘못된 주민등록번호입니다."
+
+gender_number = input("주민등록번호를 입력하세요 (예: 821010-1635210): ")
+
+print(check_gender(gender_number))
+
+# 195
+# ohlc 리스트에는 시가(open), 고가 (high), 저가 (low) , 종가(close)가 날짜별로 저장돼 있다. 
+# 화면에 종가데이터를 출력하라.
+
+ohlc = [["open", "high", "low", "close"],
+        [100, 110, 70, 100],
+        [200, 210, 180, 190],
+        [300, 310, 300, 310]]
+# 100
+# 190
+# 310
+
+for i in ohlc[1:]:
+    for n in i[3:]:
+        print(n)

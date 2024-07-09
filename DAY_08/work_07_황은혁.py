@@ -270,19 +270,27 @@ print(filename)
 
 korean, english, mathematics, science = map(int, input().split())
 
-def get_min_max_score(korean,english,mathematics,science):
-    return min(korean,english,mathematics,science),max(korean,english,mathematics,science)
-def get_average(korean=0,english=0,mathematics=0,science=0):
-    return (korean + english + mathematics +science)/len([korean,english,mathematics,science])
-min_score = 76.00
-max_score = 89.00
-# min_score, max_score = get_min_max_score(korean, english, mathematics, science)
+def get_min_max_score(*args):
+        return min(args),max(args)
+
+def get_average(**kwargs):
+    total = sum(kwargs.values())
+    cnt = len(kwargs)
+    return total / cnt
+
+min_score, max_score = get_min_max_score(korean, english, mathematics, science)
 average_score = get_average(korean=korean, english=english,
                             mathematics=mathematics, science=science)
 print('낮은 점수: {0:.2f}, 높은 점수: {1:.2f}, 평균 점수: {2:.2f}'
       .format(min_score, max_score, average_score))
  
-# min_score, max_score = get_min_max_score(english, science)
+min_score, max_score = get_min_max_score(english, science)
 average_score = get_average(english=english, science=science)
 print('낮은 점수: {0:.2f}, 높은 점수: {1:.2f}, 평균 점수: {2:.2f}'
       .format(min_score, max_score, average_score))
+# 예
+# 입력
+# 76 82 89 84
+# 결과
+# 낮은 점수: 76.00, 높은 점수: 89.00, 평균 점수: 82.75
+# 낮은 점수: 82.00, 높은 점수: 84.00, 평균 점수: 83.00
